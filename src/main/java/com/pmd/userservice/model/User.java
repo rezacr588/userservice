@@ -1,10 +1,10 @@
 package com.pmd.userservice.model;
 
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
-
 import java.util.ArrayList;
 import java.util.List;
+
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection = "users")
 public class User {
@@ -85,17 +85,5 @@ public class User {
 
   public void setPermissions(List<Permission> permissions) {
     this.permissions = permissions;
-  }
-
-  @Override
-  public String toString() {
-    return "User{" +
-        "id='" + id + '\'' +
-        ", username='" + username + '\'' +
-        ", email='" + email + '\'' +
-        ", role=" + role +
-        ", isOnline=" + isOnline +
-        ", permissions=" + permissions +
-        '}';
   }
 }
